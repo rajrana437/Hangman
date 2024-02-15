@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Over View Controller-->
+        <scene sceneID="ZJX-yP-k8l">
+            <objects>
+                <viewController storyboardIdentifier="gameOverVC" id="Mjg-zI-CCS" customClass="GameOverViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WuN-hO-U6M">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="89" translatesAutoresizingMaskIntoConstraints="NO" id="HAW-9u-MXy">
+                                <rect key="frame" x="46" y="104" width="301" height="644.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oQY-hM-CFe">
+                                        <rect key="frame" x="53.333333333333329" y="0.0" width="194.33333333333337" height="198.66666666666666"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWq-NL-I45">
+                                                <rect key="frame" x="0.0" y="0.0" width="194.33333333333334" height="99.333333333333329"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="70"/>
+                                                <color key="textColor" red="0.0" green="0.53725490200000003" blue="0.4823529412" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVER" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDd-hk-efu">
+                                                <rect key="frame" x="0.0" y="99.333333333333343" width="194.33333333333334" height="99.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="70"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman" translatesAutoresizingMaskIntoConstraints="NO" id="Qag-30-1rU">
+                                        <rect key="frame" x="0.0" y="287.66666666666669" width="301" height="201"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="201" id="6u9-aY-U4m"/>
+                                            <constraint firstAttribute="width" constant="301" id="cP9-6j-FZJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resetIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7t0-x6-QkH">
+                                        <rect key="frame" x="117.33333333333334" y="577.66666666666663" width="66.666666666666657" height="66.666666666666629"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="if0-c2-OGy"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.78039215689999997" green="0.42745098040000001" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HAW-9u-MXy" firstAttribute="centerX" secondItem="WuN-hO-U6M" secondAttribute="centerX" id="WK9-vY-LpG"/>
+                            <constraint firstItem="HAW-9u-MXy" firstAttribute="centerY" secondItem="WuN-hO-U6M" secondAttribute="centerY" id="ldC-ec-6bP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="restartButton" destination="7t0-x6-QkH" id="mPw-ck-UXg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jy6-fa-FZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570.2290076335878" y="0.70422535211267612"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="mainView" id="BYZ-38-t0r" customClass="ViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="zvo-xO-ZEv">
+                                <rect key="frame" x="22" y="75.666666666666686" width="349.33333333333331" height="701"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="37" translatesAutoresizingMaskIntoConstraints="NO" id="Etw-zD-gIN">
+                                        <rect key="frame" x="24.666666666666657" y="0.0" width="300" height="357"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="118" translatesAutoresizingMaskIntoConstraints="NO" id="AE5-nk-krC">
+                                                <rect key="frame" x="27.666666666666671" y="0.0" width="244.33333333333331" height="20"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-1v-G0k">
+                                                        <rect key="frame" x="0.0" y="0.0" width="59.333333333333336" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Win :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH3-Ws-XTK">
+                                                                <rect key="frame" x="0.0" y="0.0" width="38.666666666666664" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Km-Md-At3">
+                                                                <rect key="frame" x="49.666666666666671" y="0.0" width="9.6666666666666643" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="86H-Jw-o4f">
+                                                        <rect key="frame" x="177.33333333333331" y="0.0" width="67" height="20"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lose :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwZ-Bl-7ou">
+                                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpD-dD-eqU">
+                                                                <rect key="frame" x="57.333333333333343" y="0.0" width="9.6666666666666714" height="20"/>
+                                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HangmanBg" translatesAutoresizingMaskIntoConstraints="NO" id="nyS-RI-Iex">
+                                                <rect key="frame" x="0.0" y="57" width="300" height="300"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="300" id="86b-4C-jQW"/>
+                                                    <constraint firstAttribute="height" constant="300" id="nQh-PH-QMC"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-7e-fAq">
+                                        <rect key="frame" x="0.0" y="383" width="349.33333333333331" height="318"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FJd-eU-XIa">
+                                                <rect key="frame" x="47.000000000000014" y="0.0" width="255.33333333333337" height="42.666666666666664"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSH-Kh-WYR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="19.333333333333332" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpF-t5-fsB">
+                                                        <rect key="frame" x="39.333333333333329" y="0.0" width="19.333333333333329" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-ps-cCC">
+                                                        <rect key="frame" x="78.666666666666657" y="0.0" width="19.333333333333329" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j54-B5-SSj">
+                                                        <rect key="frame" x="118" y="0.0" width="19.333333333333343" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccm-3i-0v6">
+                                                        <rect key="frame" x="157.33333333333334" y="0.0" width="19.333333333333343" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="6" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzI-1E-Rvf">
+                                                        <rect key="frame" x="196.66666666666669" y="0.0" width="19.333333333333343" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" tag="7" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1lk-wp-6Ol">
+                                                        <rect key="frame" x="236" y="0.0" width="19.333333333333343" height="42.666666666666664"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Light" family="Chalkboard SE" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Doy-ub-OzU">
+                                                <rect key="frame" x="0.0" y="76.6666666666667" width="349.33333333333331" height="241.33333333333337"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="gZ8-Bn-TnY">
+                                                        <rect key="frame" x="1" y="0.0" width="347.33333333333331" height="45.333333333333336"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drQ-Mq-VkF">
+                                                                <rect key="frame" x="0.0" y="0.0" width="39.333333333333336" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="A" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O7k-j5-cz3"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3d0-Dz-dGr">
+                                                                <rect key="frame" x="51.333333333333329" y="0.0" width="39.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="B" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pmi-Ha-ZT5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0Q-TC-Swc">
+                                                                <rect key="frame" x="102.66666666666667" y="0.0" width="39.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="C" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i8r-JN-uF1"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPf-Ac-dlE">
+                                                                <rect key="frame" x="154" y="0.0" width="39.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="D" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1gt-Xl-o6u"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-18-N30">
+                                                                <rect key="frame" x="205.33333333333334" y="0.0" width="39.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="E" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eKC-jq-kAt"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-1T-MNj">
+                                                                <rect key="frame" x="256.66666666666669" y="0.0" width="39.333333333333314" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="F" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7cb-Ha-nGV"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLw-zm-YZU">
+                                                                <rect key="frame" x="308" y="0.0" width="39.333333333333314" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="G" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86Z-bT-F2q"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-HC-sOg">
+                                                        <rect key="frame" x="0.0" y="65.333333333333258" width="349" height="45.333333333333343"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M22-gG-c8Q">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="H" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OdR-7J-8kc"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bdf-5s-E0F">
+                                                                <rect key="frame" x="51" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="I" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0be-7d-jAT"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-8D-kpl">
+                                                                <rect key="frame" x="102" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="J" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="usB-fu-qHh"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P40-c0-JT1">
+                                                                <rect key="frame" x="153" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="K" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kv8-Gy-dN9"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CL-um-FVP">
+                                                                <rect key="frame" x="204" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="L" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w9A-qy-EG0"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAa-T2-7lY">
+                                                                <rect key="frame" x="255" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="M" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BlF-iW-a7b"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jxg-3H-Qcb">
+                                                                <rect key="frame" x="306" y="0.0" width="43" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="N" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IDf-ua-1Bp"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="8vt-RL-7LY">
+                                                        <rect key="frame" x="0.0" y="130.66666666666663" width="349.33333333333331" height="45.333333333333343"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHg-gq-UmH">
+                                                                <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="O" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SVP-Gs-DT7"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7c1-ui-cjg">
+                                                                <rect key="frame" x="51.333333333333329" y="0.0" width="41.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="P" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9UB-Oc-ahO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VH1-EP-3zx">
+                                                                <rect key="frame" x="102.66666666666667" y="0.0" width="41.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Q" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfh-VQ-yi5"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4u-kI-4LF">
+                                                                <rect key="frame" x="154" y="0.0" width="41.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="R" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVO-nQ-GlK"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Fd-df-Coc">
+                                                                <rect key="frame" x="205.33333333333334" y="0.0" width="41.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="S" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PvP-hl-s7d"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGQ-RF-fnC">
+                                                                <rect key="frame" x="256.66666666666669" y="0.0" width="41.333333333333314" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="T" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x6V-8K-Vhy"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJC-w6-UHH">
+                                                                <rect key="frame" x="308" y="0.0" width="41.333333333333314" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="U" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1D-nn-oKA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bra-mM-vJ9">
+                                                        <rect key="frame" x="48.666666666666671" y="196" width="251.66666666666663" height="45.333333333333343"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-i1-Fgn">
+                                                                <rect key="frame" x="0.0" y="0.0" width="46.333333333333336" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="V" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTw-EO-xyE"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xiv-26-2wI">
+                                                                <rect key="frame" x="51.333333333333329" y="0.0" width="46.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="W" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X0h-XG-fYp"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKw-vm-F8E">
+                                                                <rect key="frame" x="102.66666666666667" y="0.0" width="46.333333333333329" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="X" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WGJ-mF-wmx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YxB-y9-9QO">
+                                                                <rect key="frame" x="154" y="0.0" width="46.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Y" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S4K-g3-OsX"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zcy-7F-5LM">
+                                                                <rect key="frame" x="205.33333333333331" y="0.0" width="46.333333333333343" height="45.333333333333336"/>
+                                                                <color key="tintColor" systemColor="labelColor"/>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain" title="Z" subtitle="">
+                                                                    <fontDescription key="titleFontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="22"/>
+                                                                </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="keyHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jmL-hU-QbE"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <color key="tintColor" name="AccentColor"/>
+                                                <rect key="contentStretch" x="0.34999999999999998" y="0.0" width="1" height="1"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zvo-xO-ZEv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="XAq-mv-tja"/>
+                            <constraint firstItem="zvo-xO-ZEv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oKl-AD-2Qe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="hangmanImageView" destination="nyS-RI-Iex" id="AFq-xJ-6fa"/>
+                        <outlet property="loseScoreLabel" destination="OpD-dD-eqU" id="5qt-yO-P1O"/>
+                        <outlet property="winScoreLabel" destination="2Km-Md-At3" id="vQt-KX-Dej"/>
+                        <outletCollection property="letterLabels" destination="wSH-Kh-WYR" collectionClass="NSMutableArray" id="K8U-QB-M64"/>
+                        <outletCollection property="letterLabels" destination="xpF-t5-fsB" collectionClass="NSMutableArray" id="sAz-BA-YYD"/>
+                        <outletCollection property="letterLabels" destination="bqR-ps-cCC" collectionClass="NSMutableArray" id="bMS-Dk-v7H"/>
+                        <outletCollection property="letterLabels" destination="j54-B5-SSj" collectionClass="NSMutableArray" id="Kbs-vH-tES"/>
+                        <outletCollection property="letterLabels" destination="Ccm-3i-0v6" collectionClass="NSMutableArray" id="yv5-2I-mDB"/>
+                        <outletCollection property="letterLabels" destination="lzI-1E-Rvf" collectionClass="NSMutableArray" id="tv2-xf-ONO"/>
+                        <outletCollection property="letterLabels" destination="1lk-wp-6Ol" collectionClass="NSMutableArray" id="mvQ-0w-7Te"/>
+                        <outletCollection property="keyButtons" destination="JCQ-18-N30" collectionClass="NSMutableArray" id="iQ3-xg-eZr"/>
+                        <outletCollection property="keyButtons" destination="drQ-Mq-VkF" collectionClass="NSMutableArray" id="0FV-9m-Nj4"/>
+                        <outletCollection property="keyButtons" destination="3d0-Dz-dGr" collectionClass="NSMutableArray" id="uPW-Ib-urB"/>
+                        <outletCollection property="keyButtons" destination="z0Q-TC-Swc" collectionClass="NSMutableArray" id="hEG-3X-Dtd"/>
+                        <outletCollection property="keyButtons" destination="jPf-Ac-dlE" collectionClass="NSMutableArray" id="qsr-0P-A9d"/>
+                        <outletCollection property="keyButtons" destination="uHu-1T-MNj" collectionClass="NSMutableArray" id="WEi-nR-IlX"/>
+                        <outletCollection property="keyButtons" destination="zLw-zm-YZU" collectionClass="NSMutableArray" id="MhL-AO-8bU"/>
+                        <outletCollection property="keyButtons" destination="M22-gG-c8Q" collectionClass="NSMutableArray" id="5qL-hM-0cE"/>
+                        <outletCollection property="keyButtons" destination="Bdf-5s-E0F" collectionClass="NSMutableArray" id="aGD-zS-LiR"/>
+                        <outletCollection property="keyButtons" destination="zrq-8D-kpl" collectionClass="NSMutableArray" id="rCb-Nn-qsW"/>
+                        <outletCollection property="keyButtons" destination="P40-c0-JT1" collectionClass="NSMutableArray" id="Yje-WX-fb2"/>
+                        <outletCollection property="keyButtons" destination="8CL-um-FVP" collectionClass="NSMutableArray" id="f3x-5p-ZoT"/>
+                        <outletCollection property="keyButtons" destination="hAa-T2-7lY" collectionClass="NSMutableArray" id="D3V-TT-Sr7"/>
+                        <outletCollection property="keyButtons" destination="Jxg-3H-Qcb" collectionClass="NSMutableArray" id="y7w-KJ-flq"/>
+                        <outletCollection property="keyButtons" destination="jHg-gq-UmH" collectionClass="NSMutableArray" id="zWt-RV-z9E"/>
+                        <outletCollection property="keyButtons" destination="7c1-ui-cjg" collectionClass="NSMutableArray" id="GUW-uC-asM"/>
+                        <outletCollection property="keyButtons" destination="VH1-EP-3zx" collectionClass="NSMutableArray" id="QAP-LS-FZg"/>
+                        <outletCollection property="keyButtons" destination="O4u-kI-4LF" collectionClass="NSMutableArray" id="ldo-6g-ccM"/>
+                        <outletCollection property="keyButtons" destination="0Fd-df-Coc" collectionClass="NSMutableArray" id="sTd-k7-BQq"/>
+                        <outletCollection property="keyButtons" destination="RGQ-RF-fnC" collectionClass="NSMutableArray" id="vM3-Sq-rh6"/>
+                        <outletCollection property="keyButtons" destination="vJC-w6-UHH" collectionClass="NSMutableArray" id="HuV-7a-E7C"/>
+                        <outletCollection property="keyButtons" destination="H9P-i1-Fgn" collectionClass="NSMutableArray" id="XEg-Mn-VHH"/>
+                        <outletCollection property="keyButtons" destination="Xiv-26-2wI" collectionClass="NSMutableArray" id="BE3-hN-nbO"/>
+                        <outletCollection property="keyButtons" destination="JKw-vm-F8E" collectionClass="NSMutableArray" id="xdS-I6-3mV"/>
+                        <outletCollection property="keyButtons" destination="YxB-y9-9QO" collectionClass="NSMutableArray" id="b9u-ND-Okj"/>
+                        <outletCollection property="keyButtons" destination="zcy-7F-5LM" collectionClass="NSMutableArray" id="dFr-xo-rzN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54.198473282442748" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="HangmanBg" width="342" height="341.33334350585938"/>
+        <image name="hangman" width="162.33332824707031" height="162"/>
+        <image name="resetIcon" width="66.666664123535156" height="66.666664123535156"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
